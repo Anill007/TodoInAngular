@@ -1,14 +1,12 @@
 <h1>My TODO App</h1>
 <app-add-todo (myEvent) = "addTodo($event)" [length]="lenTodo" ></app-add-todo>
-
-
 <div *ngIf="this.todos.length === 0; then thenBlock else elseBlock"></div>
 <ng-template #thenBlock>
     <h1>No Todos to render.</h1>
 </ng-template>
 <ng-template #elseBlock>
     <div *ngFor="let todo of todos">
-        <app-todo-list [todo]="todo"  (todoDelete)="deleteTodo($event)"></app-todo-list>
+        <app-todo-list [todo]="todo"  (todoDelete)="deleteTodo($event)" (todoToggle)="toggleStat($event)"></app-todo-list>
     </div>
 </ng-template>
 

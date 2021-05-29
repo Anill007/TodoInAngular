@@ -1,6 +1,11 @@
-<div class="todo">
+<div class="todo" [ngClass]="{'completeClass' : !todo.active}">
 <h4>{{todo.sno}}</h4>
-<h2>{{todo.title}}</h2>
-<h4>{{todo.description}}</h4>
+<h2 [ngClass]="{'strike' : !todo.active}">{{todo.title}}</h2>
+<h4 [ngClass]="{'strike' : !todo.active}">{{todo.description}}</h4>
+<div>
+<input type="checkbox" name="status" id="status" value="completed" (click)="statToggle(todo)">
+<span>COMPLETED</span>
+</div>
+<br>
 <button (click)="deleteTodo(todo)">DELETE</button>
 </div>
