@@ -1,0 +1,12 @@
+.todo {
+  background-color: aqua;
+  margin: 16px;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  transition: 0.1s ease-out;
+}
+
+.todo:hover {
+  box-shadow: 10px 10px 5px rgb(0, 0, 0);
+}
